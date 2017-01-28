@@ -1,0 +1,43 @@
+body {
+	text-align: center;
+	align-content: center;
+	background-color: orange;
+}
+
+img {
+	width: 150px;
+}
+
+ul {
+	list-style: none;
+	
+	width: 70%;
+}
+
+p {
+	background-color: white;
+}
+
+#addBurger {
+	
+}
+
+.dev {
+	background-color: orange;
+	color: red;
+}
+
+.devour {
+
+}
+
+.create-update-form {
+	display: block;
+	clear: all;
+	width: 100%;
+}
+
+#burg {
+	width: 70%;
+	height: 200px;
+}

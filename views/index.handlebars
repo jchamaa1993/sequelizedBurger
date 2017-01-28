@@ -1,0 +1,28 @@
+<h1><img src= "./img/burger.png"></h1>
+<h1>Eat-Da-Burger!</h1>
+
+<ul>
+
+	{{#each burgers}}
+		<li>
+			<p>
+				{{this.id}}. {{this.burger_name}}
+				{{#unless this.devoured}}
+					<form action ="update/{{this.id}}?_method=PUT" method="POST">
+						<button type = "submit" id={{this.id}} class="devour">Devour it!</button>
+					</form>
+				{{/unless}}
+				{{#if this.devoured}}
+					<p class="dev">above has been devoured.</p>
+				{{/if}}
+			</p>
+		</li>
+	{{/each}}
+</ul>
+<form class = "create-update-form" action="/create" method = "POST">
+	<div class="form-group">
+		<label for="burger">
+		<input type = "text" id = "burg" name = "burger_name">
+	</div>
+	<button type = "submit" id="addBurger">Add Burger</button>
+</form>
