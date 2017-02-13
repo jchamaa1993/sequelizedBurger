@@ -13,12 +13,12 @@ module.exports = function(app) {
 		res.redirect('/index');
 	});
 
-	app.get('/', function(req, res) {
-
-	});
+	
 	app.get("/index", function(req, res) {
 		db.burgers.findAll().then(function(dbBurger) {
-			res.render("index", dbBurger);
+			console.log(dbBurger);
+			var hbsObject = { burgers: dbBurger };
+			res.render("index", hbsObject);
 		});
 	});
 
